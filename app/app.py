@@ -10,6 +10,6 @@ import config
 if __name__ == '__main__':
 
     for i, symbol in enumerate(config.SYMBOLS):
-        link = aux.get_download_link(symbol)
-        aux.download_financial_data(link, f'{symbol.upper()}.csv')
+        link = app_aux.get_download_link(symbol)
+        app_aux.download_financial_data(link, f'{symbol.upper()}.csv')
         print(f'Saving file #{i}\n')
