@@ -4,7 +4,7 @@ created: 2022-11-25
 @author: seraph1001100
 project: Yahoo Finance
 """
-import aux
+import app_aux
 import config
 
 if __name__ == '__main__':
