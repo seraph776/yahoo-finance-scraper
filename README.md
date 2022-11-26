@@ -22,7 +22,7 @@ _Show your support and give this repo a_ ⭐
 ## Objective
 
 The objective of this project is to download the financial history of the following stocks, and save the data to csv in
-the [downloads](#) directory. 
+the [data downloads](https://github.com/seraph776/yahoo-finance-scraper/tree/main/app/data) directory. 
 
 - `Amazon`
 - `Apple`
