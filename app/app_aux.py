@@ -18,14 +18,14 @@ def get_download_link(symbol):
         raise SystemExit(e)
     soup = BeautifulSoup(r.text.encode('utf8'), 'lxml')
     try:
-        return soup.find('a', attrs={'download': f'{symbol.upper()}.csv'}).attrs['href']
+        return soup.find('a', attrs={'data': f'{symbol.upper()}.csv'}).attrs['href']
     except AttributeError as e:
-        print('Item does not have  download link')
+        print('Item does not have  data link')
 
 
 def download_financial_data(link, filename):
     r = requests.get(link, stream=True, headers=config.HEADERS)
-    path = os.path.join(os.getcwd(), 'downloads')
+    path = os.path.join(os.getcwd(), 'data')
     if not os.path.exists(path):
         os.mkdir(path)
     with open(os.path.join(path, filename), 'wb') as file:
